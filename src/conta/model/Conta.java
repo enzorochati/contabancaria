@@ -59,17 +59,18 @@ public abstract class Conta {
     public boolean sacar(float valor) {
 
         if(this.getSaldo() < valor) {
-            System.out.println("Saldo Insuficiente!");
+            System.out.println("\n Saldo Insuficiente!");
             return false;
         }
 
         this.setSaldo(this.getSaldo() - valor);
         return true;
-
     }
 
     public void depositar(float valor) {
+
         this.setSaldo(this.getSaldo() + valor);
+
     }
 
     public void visualizar() {
@@ -85,14 +86,15 @@ public abstract class Conta {
                 break;
         }
 
-        System.out.println("\n\n***********************************************************");
+        System.out.println("\n\n*********************************************************************");
         System.out.println("Dados da Conta:");
-        System.out.println("***********************************************************");
+        System.out.println("*********************************************************************");
         System.out.println("Numero da Conta: " + this.numero);
         System.out.println("Agência: " + this.agencia);
         System.out.println("Tipo da Conta: " + tipo);
         System.out.println("Titular: " + this.titular);
         System.out.println("Saldo: " + this.saldo);
+
     }
 
 }
